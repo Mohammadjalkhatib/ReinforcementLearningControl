@@ -1,0 +1,12 @@
+>> mdl = "RLproject";
+>> actionInfo = rlNumericSpec([1 1]);
+>> actionInfo.Name = "flow";
+>> observationInfo = rlNumericSpec([3 1], LowerLimit=[-inf -inf 0  ]', UpperLimit=[ inf  inf inf]');
+>> observationInfo.Name = "observations";
+>> observationInfo.Description = "integrated error, error, and measured height";
+
+>>env = rlSimulinkEnv(mdl,mdl + "/RL Agent",observationInfo,actionInfo);
+ 
+>> env = rlSimulinkEnv(mdl,mdl + "/RL Agent",observationInfo,actionInfo);
+
+load('WaterTankDDPG'); 
